@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>circleMagic.js by Andrew</title>
+    <link rel="stylesheet" href="dest/css/normalize.css">
+    <link rel="stylesheet" href="dest/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="full-center">
+            <h1 class="header__heading">circleMagic.js</h1>
+            <h3 class="subscribe">circleMagic.js is a lightweight library for jQuery</h3>
+        </div>
+        <div class="arrow__btn">
+            <img src="dest/img/download.svg" alt="" width="50" height="50" class="btn">
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="copy">
+                <h1>What is it?</h1>
+                <p>circleMagic.js is a jQuery plugin that create simple and ease you to create a perfect animated header
+                    effect. It Works by creating canvas element in section that is selected, and create random bulls,
+                    random sizes, and random color. Compatible with modern browser and even with IE9.
+                </p>
+                <p>circleMagic.JS is not hardCPU or any of RAM Revourer. It is for creating perfect animation.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="copy no-margin">
+                <h1>Above Example</h1>
+            </div>
+            <div class="example">
+                <pre class="code">
+                    <span class="jq">$(</span><span class="brace">'</span><span class="selector">.header</span><span
+                        class="brace">'</span><span class="jq">)</span><span class="method">.circleMagic</span><span
+                        class="jq">({</span>
+                    <span class="key">      radius:</span> <span class="selector">35</span><span class="jq">,</span>
+                    <span class="key">      density:</span> <span class="selector">0.3</span><span class="jq">,</span>
+                    <span class="key">      color:</span> <span class="selector">'rgba(255,255,255, .4)'</span><span
+                        class="jq">,</span>
+                    <span class="comment"><span class="key comment">      //color:</span> <span
+                            class="selector comment">'random'</span><span class="jq">,</span></span>
+                    <span class="key">      clearOffset:</span> <span class="selector">0.3</span>
+                    <span class="jq">   });</span>
+                </pre>
+            </div>
+            <div class="copy no-margin">
+                <h1>Options</h1>
+            </div>
+            <table class="table table-striped">
+                <tr class="row">
+                    <td class="data">radius</td>
+                    <td class="data">Defines radius of the circles</td>
+                </tr>
+                <tr class="row">
+                    <td class="data">density</td>
+                    <td class="data">Specify how much circles will be on canvas element</td>
+                </tr>
+                <tr class="row">
+                    <td class="data">color</td>
+                    <td class="data">Color of circle. Can be used <span class="color">#hex</span>, <span class="color">rgba(), </span>
+                        <span class="color">hsl() </span> or a <span class="color">'random' </span> keyword.
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="data">clearOffset</td>
+                    <td class="data">Define how circles disappears</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+   
+</div><!-- end of container -->
+
+<!-- Scripts loading -->
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="src/circleMagic.js"></script>
+<script>
+  window.onload = function() {
+    $(".btn").on("click", function (e) {
+      e.preventDefault();
+      var top = window.innerHeight;
+      console.log(top);
+      $('body,html').animate({scrollTop: top + 20}, 1200);
+    });
+
+    $('.header').circleMagic({
+      radius: 35,
+      density: .1,
+      color: 'rgba(255,255,255, .4)',
+      clearOffset: .9
+    });
+  }
+</script>
+</body>
+</html>
