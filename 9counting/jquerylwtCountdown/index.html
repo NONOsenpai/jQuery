@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100|Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    
+    <!-- Optional theme -->
+    
+    <link href="css/style2.css" rel="stylesheet">
+    
+    <link href="style.css" rel="stylesheet">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    
+    <script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script>    
+    <script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script> 
+
+</head>
+
+<body>
+	
+    <div class="header">
+    	
+        <h1>Comming Soon</h1>
+        
+    </div><!--/header-->
+    
+    <div class="container">
+    
+        <div class="timer-box">
+            
+            <h5>Our site will be launched soon. We will be up and running in:</h5>
+            
+            <div id="countdown">
+                    
+                        <div class="dash weeks_dash">
+                            <span class="dash_title">周</span>
+                            <div class="digit">0</div>
+                            <div class="digit">0</div>
+                        </div>
+    
+                        <div class="dash days_dash">
+                            <span class="dash_title">天</span>
+                            <div class="digit">0</div>
+                            <div class="digit">0</div>
+                        </div>
+    
+                        <div class="dash hours_dash">
+                            <span class="dash_title">小时</span>
+                            <div class="digit">0</div>
+                            <div class="digit">0</div>
+                        </div>
+    
+                        <div class="dash minutes_dash">
+                            <span class="dash_title">分</span>
+                            <div class="digit">0</div>
+                            <div class="digit">0</div>
+                        </div>
+    
+                        <div class="dash seconds_dash">
+                            <span class="dash_title">秒</span>
+                            <div class="digit">0</div>
+                            <div class="digit">0</div>
+                        </div>
+    
+                    
+                        
+                </div> <!-- end of countdown -->
+    
+            
+        </div><!--/timer-box-->
+    
+    <ul class="social-link">
+    	<li>
+    	<a href="#" class="fb-link-btn"><i class="fb-icon"></i> Like us on Facebook</a>
+    	</li>
+        <li>
+    	<a href="#" class="twt-link-btn"><i class="twt-icon"></i> Follow us on Twitter</a>
+    	</li>
+    </ul>
+    </div><!--/container-->
+
+<!-- start of the javascript code that handles the countdown -->
+		<script language="javascript" type="text/javascript">
+			jQuery(document).ready(function() {
+				$('#countdown').countDown({
+				targetDate: {
+				'day': 5,
+				'month': 8,
+				'year': 2024,
+				'hour': 11,
+				'min': 0,
+				'sec': 0
+				}
+				});
+				$('#email_field').focus(email_focus).blur(email_blur);
+				$('#subscribe_form').bind('submit', function() { return false; });
+			}); 
+		</script>
+
+</body>
+</html>
